@@ -21,9 +21,10 @@ jobs:
         # Container registry username
         username: nftestgha
         # Container registry password
-        password: # default is 
+        password: ${{ secrets.SuperSecret }}
         # Container registry server url
         login-server: nftestgha.azurecr.io
-    - run: |
+    - name: Build and push
+      run: |
         docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
         docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
