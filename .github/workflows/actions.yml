@@ -21,7 +21,7 @@ jobs:
         # Container registry username
         username: nftestgha
         # Container registry password
-        password: ${{ secrets.SuperSecret }}
+        password: ${{ secrets.acr_key }}
         # Container registry server url
         login-server: nftestgha.azurecr.io
     - name: Build and push
