@@ -26,5 +26,5 @@ jobs:
         login-server: nftestgha.azurecr.io
     - name: Build and push
       run: |
-        docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
-        docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
+        docker build . -t nftestgha.azurecr.io/website:${{ github.sha }}
+        docker push nftestgha.azurecr.io/website:${{ github.sha }}
